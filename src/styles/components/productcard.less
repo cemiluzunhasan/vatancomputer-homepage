@@ -1,0 +1,141 @@
+.product-card {
+  display       : flex;
+  position      : relative;
+  flex-direction: column;
+  align-items   : center;
+  border        : 1px solid @colors[grey];
+  padding       : 30px;
+  padding-top   : 60px;
+
+  .sold {
+    background     : @colors[light-blue];
+    color          : @colors[white];
+    text-align     : center;
+    height         : 30px;
+    position       : absolute;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    margin         : 0;
+    top            : 0;
+    left           : 0;
+    width          : 100%;
+    font-size      : @fontSize[sm];
+    z-index        : 3;
+  }
+
+  .web {
+    color          : @colors[light-blue];
+    text-align     : center;
+    height         : 10px;
+    position       : absolute;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    margin         : 10px 0;
+    top            : 0;
+    left           : 0;
+    width          : 100%;
+    font-size      : @fontSize[xs];
+    font-weight    : 700;
+    z-index        : 2;
+  }
+
+  .info {
+    display    : flex;
+    align-items: center;
+    margin-top : 20px;
+
+    .rating {
+      color    : @colors[orange];
+      font-size: @fontSize[sm];
+    }
+
+    .comment {
+      font-size  : @fontSize[sm];
+      color      : @colors[dark-grey];
+      margin-left: 5px;
+    }
+  }
+
+  .code {
+    font-size: @fontSize[xs];
+    color    : @colors[dark-grey];
+  }
+
+  .title {
+    height    : 45px;
+    font-size : @fontSize[md];
+    text-align: center;
+  }
+
+  .price {
+    font-size    : @fontSize[xxl];
+    text-align   : center;
+    font-weight  : bold;
+    color        : @colors[blue];
+    margin-bottom: 0;
+  }
+
+  .stock {
+    color      : @colors[red];
+    font-size  : @fontSize[sm];
+    font-weight: 700;
+    margin     : 10px 0;
+  }
+
+  .btn-add-basket {
+    display   : none;
+    position  : absolute;
+    bottom    : 0;
+    left      : 0;
+    right     : 0;
+    width     : 100%;
+    border    : none;
+    height    : 50px;
+    background: @colors[light-blue];
+    color     : @colors[white];
+    cursor    : pointer;
+    z-index   : 1;
+
+    i {
+      position       : absolute;
+      left           : 0;
+      top            : 0;
+      background     : @colors[blue];
+      height         : 100%;
+      width          : 50px;
+      display        : flex;
+      align-items    : center;
+      justify-content: center;
+    }
+  }
+
+  .samedayshipping {
+    background   : @colors[grey];
+    color        : @colors[dark-grey];
+    padding      : 5px 10px;
+    font-size    : @fontSize[xs];
+    margin-bottom: 30px;
+  }
+
+  &:hover {
+    box-sizing: border-box;
+    border    : 1px solid @colors[blue];
+
+    .btn-add-basket {
+      display: block;
+    }
+  }
+}
+
+@media only screen and (max-width: 920px) {
+  .product-card {
+    padding    : 0;
+    padding-top: 40px;
+
+    .title {
+      height: 60px;
+    }
+  }
+}

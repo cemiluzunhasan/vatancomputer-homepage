@@ -1,0 +1,140 @@
+.header {
+  background: @colors[blue];
+  position  : fixed;
+  width     : 100%;
+  z-index   : 2;
+
+  .navbar-item {
+    margin: 0 15px;
+
+    &-icon {
+      font-size: 26px;
+      color    : @colors[white];
+
+      &.filled {
+        padding         : 6px;
+        color           : @colors[blue];
+        background-color: @colors[white];
+        border-radius   : 50%;
+        width           : 20px;
+        height          : 20px;
+      }
+    }
+
+    &-text {
+      margin-left: 10px;
+      color      : @colors[white];
+    }
+
+    &.search {
+      width   : 100%;
+      position: relative;
+
+      .search-icon {
+        position: absolute;
+        left    : calc(50% - 60px);
+      }
+    }
+  }
+
+  .categories {
+    display    : flex;
+    align-items: center;
+    cursor     : pointer;
+  }
+
+  .input {
+    &-search {
+      width     : 100%;
+      background: @colors[light-blue];
+      border    : none;
+      outline   : none;
+      height    : 50px;
+      color     : @colors[white];
+      text-align: center;
+
+
+      &::placeholder {
+        color: @colors[white];
+      }
+    }
+  }
+
+  .hamburger-menu-icon {
+    display: none;
+  }
+
+  .basket-count {
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    font-size       : @fontSize[sm];
+    color           : @colors[white];
+    width           : 3px;
+    height          : 3px;
+    padding         : 10px;
+    border-radius   : 50%;
+    background-color: @colors[red];
+    position        : absolute;
+    right           : -10px;
+    top             : -10px;
+  }
+}
+
+.hamburger-menu {
+  display   : none;
+  position  : absolute;
+  z-index   : 2;
+  transition: all .3s;
+  height    : 0;
+}
+
+@media screen and (max-width: 991.98px) {
+  .navbar-item:not(.hamburger-menu):not(.logo) {
+    display: none;
+  }
+
+  .hamburger-menu {
+    transition: all .3s;
+    height    : 0;
+    background: @colors[blue] !important;
+    width     : 100%;
+    position  : fixed;
+    display   : none;
+    z-index   : 2;
+    padding   : 10px 0;
+
+    &-item {
+      padding: 10px;
+
+      .navbar-item-icon {
+        margin-right: 10px;
+      }
+    }
+
+    &.pressed {
+      display       : flex;
+      flex-direction: column;
+      align-items   : center;
+      height        : auto;
+      margin-top    : 60px;
+    }
+  }
+
+  .hamburger-menu-icon {
+    display        : flex !important;
+    flex-direction : column;
+    justify-content: center;
+    cursor         : pointer;
+    transition     : .3s all;
+
+    .line {
+      transition   : .3s all;
+      height       : 2px;
+      margin-bottom: 3px;
+      width        : 15px;
+      background   : @colors[white];
+      display      : block;
+    }
+  }
+}

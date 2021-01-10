@@ -1,0 +1,36 @@
+.footer {
+  .footer-items {
+    display              : grid;
+    grid-template-columns: auto auto;
+
+    span {
+      transition: all .3s;
+
+      &:hover {
+        color: @colors[light-blue];
+      }
+    }
+  }
+
+  .special-products {
+    .footer-items {
+      display       : flex;
+      flex-direction: column;
+    }
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .footer {
+    .wrapper {
+      display: block;
+      text-align: center;
+    }
+    .footer-items {
+      grid-template-columns: auto;
+      span {
+        margin-right: 0 !important;
+      }
+    }
+  }
+}

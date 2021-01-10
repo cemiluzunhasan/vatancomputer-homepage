@@ -1,0 +1,26 @@
+{
+  "name": "vatan-computer",
+  "version": "1.0.0",
+  "description": "Vatan computer homepage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cemiluzunhasan/vatan-computer.git"
+  },
+  "author": "Cemil Uzunhasan",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-html-imports": "^1.0.6",
+    "browser-sync": "^2.26.13",
+    "gulp-less": "^4.0.1"
+  },
+  "bugs": {
+    "url": "https://github.com/cemiluzunhasan/vatan-computer/issues"
+  },
+  "homepage": "https://github.com/cemiluzunhasan/vatan-computer#readme"
+}

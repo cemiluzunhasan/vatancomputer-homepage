@@ -1,0 +1,116 @@
+@import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
+
+.swiper-container {
+  background: @colors[blue];
+
+  .swiper-pagination {
+    &-bullets {
+      bottom: 4px !important;
+    }
+
+    &-bullet {
+      background: transparent;
+      opacity   : 1;
+      border    : 1px solid @colors[white];
+
+      &-active {
+        background: @colors[white];
+      }
+    }
+  }
+}
+
+.swiper-wrapper {
+  transform: translate3d(0px, 0px, 0px);
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.swipe-slide {
+  img {
+    width: 500px;
+  }
+}
+
+.swiper-button {
+  &-prev {
+    width     : 50px !important;
+    height    : 100px !important;
+    background: rgba(0, 0, 0, 0.8);
+    left      : calc(9% - 5px) !important;
+
+    &::after {
+      font-family: "Font Awesome 5 Free" !important;
+      /* This is the correct font-family*/
+      content    : "\f0d9" !important;
+      color      : white;
+      font-size  : @fontSize[xl] !important;
+      font-weight: 900;
+    }
+  }
+
+  &-next {
+    font-family: FontAwesome;
+    width      : 50px !important;
+    height     : 100px !important;
+    background : rgba(0, 0, 0, .8);
+    right      : calc(9% + 5px) !important;
+
+    &::after {
+      font-family: "Font Awesome 5 Free" !important;
+      /* This is the correct font-family*/
+      content    : "\f0da" !important;
+      color      : @colors[white] !important;
+      font-size  : @fontSize[xl] !important;
+      font-size  : 30px;
+      font-weight: 900;
+    }
+  }
+}
+
+.slider-bestseller {
+  width   : 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+@media screen and (max-width: 1500px) {
+  .btn-slide {
+    z-index: 2;
+
+    &.btn-next {
+      right: 0;
+    }
+
+    &.btn-prev {
+      left: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .swiper-button {
+
+    &-next,
+    &-prev {
+      height: 5vh !important;
+    }
+  }
+
+  .btn-slide {
+    z-index: 2;
+    width  : 40px;
+    height : 10vw;
+    top    : 10vh;
+
+    &.btn-next {
+      right: 0;
+    }
+
+    &.btn-prev {
+      left: 0;
+    }
+  }
+}

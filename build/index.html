@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/main.css">
+  <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.js"
+    integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+  <title>Vatan Computer</title>
+</head>
+
+<body>
+  <!-- import "Header.html" -->
+<header class="header">
+  <div class="wrapper d-flex a-center j-between">
+    <a href="http://www.starbucks.com">
+      <img src="../assets/img/logo.png" class="logo" />
+    </a>
+    <div class="navbar-item categories">
+      <ion-icon name="menu-outline" class="navbar-item-icon"></ion-icon>
+      <span class="navbar-item-text">Kategoriler</span>
+    </div>
+    <div class="navbar-item search d-flex a-center">
+      <ion-icon name="search-outline" class="search-icon navbar-item-icon"></ion-icon>
+      <input name="search" id="input-search" class="input-search" placeholder="Ürün Ara">
+    </div>
+    <div class="navbar-item membership d-flex a-center">
+      <span class="navbar-item-text">Üyelik</span>
+      <ion-icon name="person" class="navbar-item-icon filled ml-10"></ion-icon>
+    </div>
+    <div class="navbar-item basket d-flex a-center p-relative">
+      <span class="navbar-item-text">Sepetim</span>
+      <ion-icon name="basket-outline" class="navbar-item-icon filled ml-10"></ion-icon>
+      <div id="basket-count" class="basket-count"></div>
+    </div>
+    <div class="navbar-item hamburger-menu-icon">
+      <span class="line first"></span>
+      <span class="line second"></span>
+      <span class="line third"></span>
+    </div>
+  </div>
+</header>
+<!-- import end -->
+  <!-- import "HamburgerMenu.html" -->
+<div class="hamburger-menu">
+  <div class="hamburger-menu-item categories">
+    <ion-icon name="menu-outline" class="navbar-item-icon text-white"></ion-icon>
+    <span class="navbar-item-text text-white">Kategoriler</span>
+  </div>
+  <div class="hamburger-menu-item membership d-flex a-center">
+    <ion-icon name="person" class="navbar-item-icon text-white"></ion-icon>
+    <span class="navbar-item-text text-white">Üyelik</span>
+  </div>
+  <div class="hamburger-menu-item basket d-flex a-center">
+    <ion-icon name="basket-outline" class="navbar-item-icon text-white"></ion-icon>
+    <span class="navbar-item-text text-white">Sepetim</span>
+  </div>
+</div>
+<!-- import end -->
+  <!-- import "Slider.html" -->
+<div class="swiper-container pt-15">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <img src="https://picsum.photos/430/430">
+    </div>
+    <div class="swiper-slide">
+      <img src="https://picsum.photos/430/430">
+    </div>
+  </div>
+  <!-- Add Pagination -->
+  <div class="swiper-pagination"></div>
+  <!-- Add Arrows -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
+
+<!-- import end -->
+  <!-- import "Content.html" -->
+<section class="mb-60">
+  <div class="wrapper">
+    <div class="d-flex j-between">
+      <p class="text-xxl">Öne Çıkanlar</p>
+      <div class="d-flex a-center">
+        <p class="text-md text-blue mr-10 c-pointer">TÜM ÖNE ÇIKANLAR</p>
+        <i class="text-blue fas fa-arrow-right"></i>
+      </div>
+    </div>
+    <div class="related-products">
+
+    </div>
+    <div class="d-flex j-between">
+      <p class="text-xxl">Çok Satanlar</p>
+      <div class="d-flex a-center">
+        <p class="text-md text-blue mr-10 c-pointer">TÜM ÇOK SATANLAR</p>
+        <i class="text-blue fas fa-arrow-right"></i>
+      </div>
+    </div>
+    <div class="p-relative">
+      <button class="btn-slide btn-prev" onclick="previousSlide()">
+        <i class="fas fa-caret-left"></i>
+      </button>
+      <div class="slider-bestseller">
+        <div class="swiper-wrapper"></div>
+      </div>
+      <button class="btn-slide btn-next" onclick="nextSlide()">
+        <i class="fas fa-caret-right"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- import end -->
+  <hr />
+  <!-- import "Footer.html" -->
+<footer class="footer">
+  <div class="wrapper d-flex j-around">
+    <div class="footer-column corporate">
+      <p class="mb-30">KURUMSAL</p>
+      <div class="footer-items">
+        <span class="text-md mb-10 mr-50 fw-light c-pointer">Hakkımızda</span>
+        <span class="text-md mb-10 mr-50 fw-light c-pointer">İletişim</span>
+        <span class="text-md mb-10 mr-50 fw-light c-pointer">Müşteri Hizmetleri</span>
+        <span class="text-md mb-10 mr-50 fw-light c-pointer">Vatan Card</span>
+        <span class="text-md mb-10 mr-50 fw-light c-pointer">Sipariş Aşamaları</span>
+        <span class="text-md mb-10 mr-50 fw-light c-pointer">Servis Takip Formu</span>
+        <span class="text-md mb-10 mr-50 fw-light c-pointer">Sıkça Sorulan Sorular</span>
+        <span class="text-md mb-10 mr-50 fw-light c-pointer">Mağazalar</span>
+        <span class="text-md mb-10 mr-50 fw-light c-pointer">İnsan Kaynakları</span>
+        <span class="text-md mb-10 mr-50 fw-light c-pointer">İşlem Rehberi</span>
+        <span class="text-md mb-10 mr-50 fw-light c-pointer">Gizlilik Politikamız</span>
+      </div>
+    </div>
+    <div class="footer-column categories">
+      <p class="mb-30">HAKKIMIZDA</p>
+      <div class="footer-items">
+        <span class="text-md mb-10 mr-50 fw-light c-pointer">Bilgisayar</span>
+        <span class="text-md mb-10 mr-50 fw-light c-pointer">Küçük Ev Aletleri</span>
+        <span class="text-md mb-10 mr-50 fw-light c-pointer">Cep Telefonu</span>
+        <span class="text-md mb-10 mr-50 fw-light c-pointer">Kişisel Bakım Ürünleri</span>
+        <span class="text-md mb-10 mr-50 fw-light c-pointer">Tablet PC</span>
+        <span class="text-md mb-10 mr-50 fw-light c-pointer">Elektrikli Süpürge</span>
+        <span class="text-md mb-10 mr-50 fw-light c-pointer">Akıllı Saat</span>
+        <span class="text-md mb-10 mr-50 fw-light c-pointer">Ütü</span>
+        <span class="text-md mb-10 mr-50 fw-light c-pointer">Vestel TV</span>
+        <span class="text-md mb-10 mr-50 fw-light c-pointer">Masaüstü Bilgisayar</span>
+        <span class="text-md mb-10 mr-50 fw-light c-pointer">Oyun Bilgisayarları</span>
+        <span class="text-md mb-10 mr-50 fw-light c-pointer">Sabit Diskler</span>
+      </div>
+    </div>
+    <div class="footer-column special-products">
+      <p class="mb-30">ÖZEL ÜRÜNLER</p>
+      <div class="footer-items">
+        <span class="text-md mb-10 mr-50 fw-light c-pointer">iPhone 7</span>
+        <span class="text-md mb-10 mr-50 fw-light c-pointer">iPhone 6S</span>
+        <span class="text-md mb-10 mr-50 fw-light c-pointer">iPhone 5S</span>
+        <span class="text-md mb-10 mr-50 fw-light c-pointer">iPhone SE</span>
+        <span class="text-md mb-10 mr-50 fw-light c-pointer">General Mobile 5 Plus</span>
+        <span class="text-md mb-10 mr-50 fw-light c-pointer">Galaxy S7</span>
+        <span class="text-md mb-10 mr-50 fw-light c-pointer">Note 5</span>
+        <span class="text-md mb-10 mr-50 fw-light c-pointer">Galaxy S6</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- import end -->
+</body>
+<script src="./scripts/helpers.js"></script>
+<script src="./models/Product.js"></script>
+<script src="./scripts/hamburgerMenu.js"></script>
+<script src="./scripts/productService.js"></script>
+<script src="./scripts/swiper.js"></script>
+</html>

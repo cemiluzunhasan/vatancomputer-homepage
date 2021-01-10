@@ -1,0 +1,31 @@
+.related-products {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  outline: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .related-products {
+    grid-template-columns: auto auto auto auto;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .related-products {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .related-products {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .related-products {
+    grid-template-columns: auto;
+  }
+}
+
+
