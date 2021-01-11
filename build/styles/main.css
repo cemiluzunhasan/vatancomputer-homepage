@@ -1484,18 +1484,20 @@
 .product-card .code {
   font-size: 10px;
   color: #9F9F9F;
+  margin-bottom: 5px;
 }
 .product-card .title {
   height: 45px;
-  font-size: 14px;
+  font-size: 12px;
   text-align: center;
+  margin: 0;
 }
 .product-card .price {
   font-size: 20px;
   text-align: center;
   font-weight: bold;
   color: #2764C0;
-  margin-bottom: 0;
+  margin: 0 !important;
 }
 .product-card .stock {
   color: #ce3c61;
@@ -1533,7 +1535,7 @@
   color: #9F9F9F;
   padding: 5px 10px;
   font-size: 10px;
-  margin-bottom: 30px;
+  margin: 0 !important;
 }
 .product-card:hover {
   box-sizing: border-box;
@@ -1542,13 +1544,19 @@
 .product-card:hover .btn-add-basket {
   display: block;
 }
-@media only screen and (max-width: 920px) {
+@media screen and (max-width: 920px) {
   .product-card {
     padding: 0;
     padding-top: 40px;
   }
   .product-card .title {
     height: 60px;
+  }
+  .product-card .samedayshipping {
+    margin-bottom: 30px;
+  }
+  .product-card .btn-add-basket {
+    display: block;
   }
 }
 body {

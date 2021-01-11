@@ -1,5 +1,7 @@
 class Product {
   constructor(data) {
+    this.soldYet = data ? data.soldYet : false;
+    this.specialToWeb = data ? data.specialToWeb : false;
     this.img = data ? data.img : '';
     this.rating = data ? data.rating : '';
     this.comment = data ? data.comment : '';
@@ -15,7 +17,7 @@ class Product {
     return `<div class="swiper-slide">
       <div class="product-card">
         <p class="sold ${!this.soldYet && 'hidden'}">AZ ÖNCE 1 ADET SATILDI</p>
-        <p class="sold ${!this.specialToWeb && 'hidden'}">WEB' E ÖZEL</p>
+        <p class="web ${!this.specialToWeb && 'hidden'}">WEB' E ÖZEL</p>
         <img src="${this.img}">
         <div class="info d-flex a-center mt-20">
           <i class="fas fa-star text-orange text-sm mr-5"></i>

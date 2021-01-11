@@ -69,7 +69,7 @@ var bestSellerSwiper = new Swiper('.slider-bestseller', {
 });
 
 
-function nextSlide() {
+const nextSlide = () => {
   bestSellerSwiper.slideNext();
 };
 
@@ -77,20 +77,3 @@ const previousSlide = () => {
   bestSellerSwiper.slidePrev();
 };
 
-const addToBasket = () => {
-  const count = localStorage.getItem('basket-count') || 0;
-  localStorage.setItem('basket-count', parseInt(count) + 1);
-  $('#basket-count').html(localStorage.getItem('basket-count'));
-}
-
-
-$(document).ready(() => {
-  fetch('../data/bestSeller.json')
-    .then(res => res.json())
-    .then(data => {
-      data.forEach(x => {
-        const product = new Product(x);
-        bestSellerSwiper.appendSlide(product.generateHtml());
-      });
-    });
-});

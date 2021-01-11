@@ -59,22 +59,24 @@
   }
 
   .code {
-    font-size: @fontSize[xs];
-    color    : @colors[dark-grey];
+    font-size    : @fontSize[xs];
+    color        : @colors[dark-grey];
+    margin-bottom: 5px;
   }
 
   .title {
     height    : 45px;
-    font-size : @fontSize[md];
+    font-size : @fontSize[sm];
     text-align: center;
+    margin    : 0;
   }
 
   .price {
-    font-size    : @fontSize[xxl];
-    text-align   : center;
-    font-weight  : bold;
-    color        : @colors[blue];
-    margin-bottom: 0;
+    font-size  : @fontSize[xxl];
+    text-align : center;
+    font-weight: bold;
+    color      : @colors[blue];
+    margin     : 0 !important;
   }
 
   .stock {
@@ -112,11 +114,11 @@
   }
 
   .samedayshipping {
-    background   : @colors[grey];
-    color        : @colors[dark-grey];
-    padding      : 5px 10px;
-    font-size    : @fontSize[xs];
-    margin-bottom: 30px;
+    background: @colors[grey];
+    color     : @colors[dark-grey];
+    padding   : 5px 10px;
+    font-size : @fontSize[xs];
+    margin    : 0 !important
   }
 
   &:hover {
@@ -129,13 +131,21 @@
   }
 }
 
-@media only screen and (max-width: 920px) {
+@media screen and (max-width: 920px) {
   .product-card {
     padding    : 0;
     padding-top: 40px;
 
     .title {
       height: 60px;
+    }
+
+    .samedayshipping {
+      margin-bottom: 30px;
+    }
+
+    .btn-add-basket {
+      display: block;
     }
   }
 }
